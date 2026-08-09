@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício</title>
+  </head>
+
+  <body>
+    <ul id="listaProdutos"></ul>
+
+    <button type="button" id="inferiores20">Promoção</button>
+
+    <button type="button" id="todos">Todos</button>
+
+    <script>
+      const produtos = [];
+
+      for (let i = 1; i < 11; i++) {
+        produtos.push({
+          id: i,
+          nome: `produto ${i}`,
+          preco: Math.round(Math.random() * 100)
+        });
+      }
+
+      //1) Criar dinamicamente os LI
+      const lista = document.getElementById("listaProdutos");
+
+      function renderizarProdutos(listaProdutos) {
+        lista.innerHTML = "";
+
+        listaProdutos.forEach((produto) => {
+          const li = document.createElement("li");
+
+          li.textContent = `${produto.nome} - R$ ${produto.preco}`;
+          lista.appendChild(li);
+        });
+      }
+      renderizarProdutos(produtos);
+
+      //2) Mostrar produtos com preço inferior a R$ 20
+      const botaoPromocao = document.getElementById("inferiores20");
+
+      botaoPromocao.addEventListener("click", () => {
+        const produtosFiltrados = produtos.filter((p) => p.preco < 20);
+
+        renderizarProdutos(produtosFiltrados);
+      });
+
+      //3) Mostrar todos os produtos
+      const botaoTodos = document.getElementById("todos");
+
+      botaoTodos.addEventListener("click", () => {
+        renderizarProdutos(produtos);
+      });
+    </script>
+  </body>
+</html>
