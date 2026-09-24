@@ -22,9 +22,7 @@
 
 ### Não é necessário criar uma tela de cadastro ou permitir a inclusão de novos jogadores.
 
-### A aplicação deverá possuir um botão "Próximo jogador".
-
-## Ao clicar nesse botão:
+## A aplicação deverá possuir um botão "Próximo jogador". Ao clicar nesse botão:
 
 ###     A vez deverá passar para o próximo jogador da lista.
 
@@ -34,9 +32,7 @@
 
 ###     O nome do jogador ativo deverá ser apresentado na tela.
 
-### A aplicação deverá possuir um botão "Inverter sentido".
-
-## Ao clicar nesse botão:
+## A aplicação deverá possuir um botão "Inverter sentido". Ao clicar nesse botão:
 
 ###     O sentido do jogo deverá ser alterado.
 
@@ -60,7 +56,7 @@
 
 ###     A indicação do jogador atual e do sentido do jogo.
 
-## Requisitos
+## Requisitos:
 
 ###     Os jogadores devem ser controlados pela lista circular encadeada.
 
