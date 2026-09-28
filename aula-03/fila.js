@@ -61,7 +61,7 @@ class Fila {
     }
 
     buscar(v) {
-        const no = fila.primeiro
+        let no = this.primeiro
 
         while(no !== null) {
             if (no.valor === v) return true
